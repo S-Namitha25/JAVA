@@ -1,0 +1,551 @@
+import java.util.*;
+public class Person
+{
+    String name;
+    int age;
+    Person(String name,int age){
+        this.name=name;
+        this.age=age;
+    }
+    void m1()
+    {
+        System.out.println("name:" +name);
+        System.out.println("age:" +age);
+    }
+	public static void main(String[] args) 
+	{
+	    Scanner input=new Scanner(System.in);
+	    String a=input.nextLine();
+	    int b=input.nextInt();
+		Person m= new Person();
+		m.m1();
+	}
+}
+
+
+************************************************
+
+AREA & PERIMETER OF RECTANGLE:
+import java.util.*;
+public class Rectangle{
+    float length;
+    float width;
+    public Rectangle(float length,float width){
+        this.length=length;
+        this.width=width;
+    }
+    void Area(){
+        float a=length * width;
+        System.out.println("Area: "+ a);
+    }
+    void Perimeter(){
+        float b=2*(length+width);
+        System.out.println("perimeter: "+ b);
+    }
+    public static void main(String[] args){
+        Scanner input= new Scanner(System.in);
+        int length=input.nextInt();
+        int width=input.nextInt();
+        Rectangle num=new Rectangle(length,width);
+        num.Area();
+        num.Perimeter();
+    }
+}
+
+
+*****************************************
+
+ODD OR EVEN :
+import java.util.*;
+public class Main
+{
+    void numbers(int n){
+      //  for(int i=1;i<=n;i++){
+            if(n%2==0){
+                System.out.print(n+ "  even  ");
+            }
+            else{
+                System.out.print(n +"   odd   ");
+            }
+        }
+    //}
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    int n=in.nextInt();
+	    Main num=new Main();
+	    num.numbers(n);
+	}
+}
+
+
+********************************************
+
+SIMPLE INTEREST:
+import java.util.*;
+public class Main{
+    void number(double p,double r,double t){
+        double a=(p*r*t)/100;
+        System.out.println("value : "+a);
+    }
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        //System.out.print("n1: ");
+        double p=in.nextDouble();
+        //System.out.print("n2: ");
+        double r=in.nextDouble();
+        System.out.print("n3: ");
+        double t=in.nextDouble();
+        Main num=new Main();
+        num.number(p,r,t);
+    }
+}
+
+
+			or
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner a=new Scanner(System.in);
+	    int n=a.nextInt();
+	        System.out.println(~n);
+	}
+}
+
+
+*******************************************
+
+WITHOUT ARG WITHOUT RETURN:
+
+import java.util.*;
+public class Main
+{
+    int a;
+    int b;
+    void display(){
+        Scanner in=new Scanner(System.in);
+        a=in.nextInt();
+        b=in.nextInt();
+    }
+    void sum(){
+        int c=a+b;
+        System.out.println("sum "+c);
+    }
+    void sub(){
+        int d=a-b;
+        System.out.println("sub "+d);
+    } 
+    void multi(){
+        int e=a*b;
+        System.out.println("multi "+e);
+    }
+	public static void main(String[] args) {
+	    Main s=new Main();
+	    s.display();
+	    s.sum();
+	    s.sub();
+	    s.multi();
+	}
+}
+
+
+*******************************************
+
+WITH ARG WITHOUT RETURN :
+
+import java.util.*;
+public class Main
+{
+    static void number(){
+        Scanner in=new Scanner(System.in);
+        int a=in.nextInt();
+        int b=in.nextInt();
+        sum(a,b);
+    }
+    static void sum(int a,int b){
+        int c=a+b;
+        System.out.println(c);
+        sub(a,b);
+    }
+    static void sub(int a,int b){
+        int d=a-b;
+        System.out.println(d);
+        multi(a,b);
+    } 
+    static void multi(int a,int b){
+        int e=a*b;
+        System.out.println(e);
+    }
+	public static void main(String[] args) {
+	    number();
+	    
+	}
+}
+
+
+*********************************************
+
+PRINT 1 TO 100 EXCEPT 20,50,70
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    int n=in.nextInt();
+	    for(int i=0;i<=n;i++){
+	        if(i==20|| i==50 ||i==70){
+	            System.out.print(" ");
+	            continue;
+	            
+	        }
+	        System.out.print(i+" ");
+	    }
+	}}
+
+
+******************************************
+PRINT ODD+1  EVEN-1 :
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    System.out.print("enter values:");
+	    int n=in.nextInt();
+	    for(int i=1;i<=n;i++){
+	        if(i%2!=0){
+	            int a=i+1;
+	            System.out.print(a+" ");
+	      }}
+	      for(int i=1;i<=n;i++){
+	        if(i%2==0){
+	            int b=i-1;
+	            System.out.print(b+" ");
+	      }
+	    }
+	}
+}
+
+**********************************************
+ARRAY: 
+
+MIN MAX 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int a[]={11,22,3,4,52};
+	    for(int i=-0;i<a.length;i++){
+	        System.out.print(a[i]+ "  ");
+	    }
+	   System.out.println();
+	    int max =a[0];
+	    int min =a[1];
+		for(int i=-0;i<a.length;i++){
+		    if(a[i]>max){
+		        max=a[i];
+		    }
+		    if(a[i]<min){
+		        min=a[i];
+		    }
+	}
+	System.out.println("Max : "+max+ "  ");
+	System.out.print("Min : "+min+ "  ");
+}}
+
+*************************************************
+GIVEN INPUT VALUE PRESENT IN ASSIGN VALUE PRINT TRUE, ELSE FALSE:
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int b[]= {1,2,3,4,5,6,7,8,9};
+		Scanner in=new Scanner(System.in);
+		int a=in.nextInt();
+		boolean found=false;
+		for(int i=0; i<b.length; i++) {
+			if(b[i]==a) {
+			    found =true;
+			}
+		}
+		if(found) {
+			System.out.println("True");
+		}
+		else {
+			System.out.println("False");
+		}
+	}
+}
+
+*******************************************************
+SORT THE ARRAY:
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in=new Scanner(System.in);
+	    System.out.print("size: ");
+	    int n=in.nextInt();
+	    int a[]=new int[n];
+	    System.out.print("values : ");
+	    for(int i=0;i<n;i++){
+	        a[i]=in.nextInt();
+	    }
+	    for(int i=0;i<n-1;i++){
+	        for(int j=0;j<n-i-1;j++){
+	            if(a[j]>a[j+1]){
+	                int temp=a[j];
+	                a[j]=a[j+1];
+	                a[j+1]=temp;
+	            }
+	        }
+	    }
+	        System.out.print("sorted Array:");
+	        for(int i=0;i<n;i++){
+	            System.out.print(a[i]+" ");
+	        }
+	}
+}
+******************************************************
+REMOVE DUPLICATE:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+		int a[]=new int[n];
+		for(int i=0; i<n; i++) {
+			a[i]=in.nextInt();
+		}
+		for(int j=0; j<n-1; j++) {
+			if(!(a[j]==a[j+1])) {   ~~~~~~~~~~~~~~~~~~
+				System.out.println(a[j]+" ");
+			}
+		}
+		System.out.println(a[n-1]);
+	}
+}
+*********************************************************
+PRINT DUPLICATE
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+		int a[]=new int[n];
+		for(int i=0; i<n; i++) {
+			a[i]=in.nextInt();
+		}
+		for(int j=0; j<n-1; j++) {
+			if(a[j]==a[j+1]) {  ~~~~~~~~~~~~~~~~
+				System.out.println(a[j]);
+				return;
+			}
+		}
+		System.out.println(a[n - 1]);
+	}
+}
+**********************************************************
+PASCAL TRIANGLE 
+
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		for(int i=1; i<=n; i++) {
+			int val=1;
+			for(int j=1; j<=i; j++) {
+				System.out.print(val+" ");
+				val=val*(i-j)/j;
+			}
+			System.out.println();
+		}
+	}
+}
+*******************************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+		Scanner in=new Scanner(System.in);
+		int a=in.nextInt();
+		int n[]=new int[a];
+		for(int i=0; i<a; i++) {
+			a[i]=in.nextInt();
+		}
+		int coumt=0;
+		for(int num:a) {
+			if(isPalindrame(num)) {
+				count++;
+			}
+		}
+		System.out.println("total palindrome: "+count);
+	}
+	public static boolean main(int num) {
+		int n=num;
+		int t=n;
+		int rem;
+		int s=0;
+		while(n>0) {
+			rem=a%10;
+			s=s*10+rem;
+			n/=10;
+		}
+		boolean flag=false;
+		if(s==t) {
+			flag=true;
+		}
+		return flag;
+	}
+}
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+STRING:
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str1="hello ";
+	    int length=str1.length();
+	    System.out.println("" +length);
+}
+}
+
+************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str1="hello ";
+	    char ch=CharAt(2);
+	    System.out.println("" +ch);
+}
+}
+************************************
+BOOLEAN :
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str1="hello ";
+	    String str2="HELLO";
+	    System.out.println("" +str1.equals(str2));
+}
+}
+
+*************************************
+IgnoreCase:
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str1="hello ";
+	    String str2="HELLO";
+	    System.out.println("" +str1.equalsIgnoreCase(str2));
+}
+}
+
+***************************************
+LOWER TO UPPER || UPPER TO LOWER CASE:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str2="HELLO";
+	    System.out.println("" +str2.toLowerCase());
+}
+}
+*************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str2="hello";
+	    //System.out.println("" +str2.indexOf('o'));
+	      System.out.println("" +str2.lastIndexOf('o'));
+}
+}
+************************************
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str2="HELLO ZZZZZZZZ";
+	    System.out.println("" +str2.startsWith("HELLO"));
+}
+}
+************************************
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str2="    HELLO ZZZZZZZZ       ";
+	    System.out.println("" +str2.trim());     // reomve white space
+}
+}
+*************************************
+REVERSE STRING:
+
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str=" HELLO ZZZZZZZZ";
+	    String reversed=" ";
+	    for(int i=str.length()- 1;i>=0;i--){
+	        reversed =reversed + str.charAt(i);
+	    }
+	    System.out.println(reversed);     
+}
+}		
+**************************************
+OCCURANCE :
+
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str=" namithanithiga";
+	    char ch='a';
+	    int count=0;
+	    for(int i=0;i<str.length();i++){
+	        if(str.charAt(i)==ch){
+	            count++;
+	        }
+	    }
+	    System.out.println(count);     
+}
+}		
+**************************************
+CHECK WHETHER GIVEN WORD IS VOWEL OR NOT:
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String str=" namithanithiga";
+	    if(str.matches(".[a-zA-Z]+.")){
+	       System.out.println("true");
+	        }
+	    else{
+	       System.out.println("false"); 
+	        }
+	    }
+}
+*******************************								
